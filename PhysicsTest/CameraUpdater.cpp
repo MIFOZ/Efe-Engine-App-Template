@@ -1,10 +1,3 @@
-/*
-* Copyright 2007-2010 (C) - Frictional Games
-*
-* This file is part of HPL1Engine
-*
-* For conditions of distribution and use, see copyright notice in LICENSE-tests
-*/
 #include "CameraUpdater.h"
 
 extern cGame *g_pGame;
@@ -54,7 +47,7 @@ cCameraUpdater::~cCameraUpdater()
 
 //-----------------------------------------------------------------------
 
-void cCameraUpdater::Update(float afFrameTime)
+void cCameraUpdater::Update(float a_fFrameTime)
 {
 	if (g_pGame->GetInput()->IsTriggered("Escape"))
 	{
@@ -81,8 +74,8 @@ void cCameraUpdater::OnDraw()
 {
 	if (m_pFont)
 	{
-		m_pGuiSet->DrawFont(_W("FPS: ") + cString::ToStringW(g_pGame->GetFPS()), m_pFont, cVector3f(5, 5, 5), 14, cColor(1, 1),
-			eFontAlign_Left, eGuiMaterial_FontNormal);
+		//m_pGuiSet->DrawFont(_W("FPS: ") + cString::ToStringW(g_pGame->GetFPS()), m_pFont, cVector3f(5, 5, 5), 14, cColor(1, 1),
+		//	eFontAlign_Left, eGuiMaterial_FontNormal);
 	}
 }
 

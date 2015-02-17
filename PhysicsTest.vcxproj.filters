@@ -12,11 +12,21 @@
     <Filter Include="Updaters">
       <UniqueIdentifier>{c255d9b8-78cb-4890-b5d8-8d23422b8a4a}</UniqueIdentifier>
     </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <Font Include="PhysicsTest\assets\fonts\bebas.ttf">
-      <Filter>Resource Files</Filter>
-    </Font>
+    <Filter Include="Resource Files\programs">
+      <UniqueIdentifier>{4c88e54c-2e62-464e-b337-f6f30b89f7be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\materials">
+      <UniqueIdentifier>{6281e2a4-f8d6-48a8-bd77-4cbbfcb0f5dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\textures">
+      <UniqueIdentifier>{26423481-c314-4487-af5c-644985a3bf2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\font">
+      <UniqueIdentifier>{67347b74-7a22-45c5-b0da-650dac75a39f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\gui">
+      <UniqueIdentifier>{37dffd2c-92be-47cd-aac7-ecda8032c1ea}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Xml Include="PhysicsTest\Config.xml">
@@ -24,7 +34,13 @@
     </Xml>
   </ItemGroup>
   <ItemGroup>
-    <None Include="PhysicsTest\resources.cfg">
+    <None Include="PhysicsTest\assets\materials\floor.mat">
+      <Filter>Resource Files\materials</Filter>
+    </None>
+    <None Include="PhysicsTest\assets\gui\gui_default.skin">
+      <Filter>Resource Files\gui</Filter>
+    </None>
+    <None Include="PhysicsTest\assets\resources.cfg">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>
@@ -35,10 +51,37 @@
     <ClCompile Include="PhysicsTest\CameraUpdater.cpp">
       <Filter>Updaters</Filter>
     </ClCompile>
+    <ClCompile Include="PhysicsTest\SceneUpdater.cpp">
+      <Filter>Updaters</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="PhysicsTest\CameraUpdater.h">
       <Filter>Updaters</Filter>
     </ClInclude>
+    <ClInclude Include="PhysicsTest\SceneUpdater.h">
+      <Filter>Updaters</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="PhysicsTest\core\programs\SkyBox.hlsl">
+      <Filter>Resource Files\programs</Filter>
+    </FxCompile>
+    <FxCompile Include="PhysicsTest\core\programs\Diffuse_Color_pp.hlsl">
+      <Filter>Resource Files\programs</Filter>
+    </FxCompile>
+    <FxCompile Include="PhysicsTest\core\programs\Diffuse_Color_vp.hlsl">
+      <Filter>Resource Files\programs</Filter>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="PhysicsTest\assets\textures\floor.bmp">
+      <Filter>Resource Files\textures</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="PhysicsTest\assets\fonts\bebas.ttf">
+      <Filter>Resource Files\font</Filter>
+    </Font>
   </ItemGroup>
 </Project>

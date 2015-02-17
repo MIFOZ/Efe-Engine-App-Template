@@ -15,7 +15,6 @@ public:
 	void SetActive(bool abX) {m_bActive = abX;}
 
 private:
-	cGame *g_pGame;
 	iFontData* m_pFont;
 	cCamera3D* m_pCamera;
 

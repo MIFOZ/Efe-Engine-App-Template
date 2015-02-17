@@ -17,14 +17,34 @@
     <Xml Include="PhysicsTest\Config.xml" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="PhysicsTest\resources.cfg" />
+    <None Include="PhysicsTest\assets\gui\gui_default.skin" />
+    <None Include="PhysicsTest\assets\materials\floor.mat" />
+    <None Include="PhysicsTest\assets\resources.cfg" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="PhysicsTest\CameraUpdater.cpp" />
     <ClCompile Include="PhysicsTest\main.cpp" />
+    <ClCompile Include="PhysicsTest\SceneUpdater.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="PhysicsTest\CameraUpdater.h" />
+    <ClInclude Include="PhysicsTest\SceneUpdater.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="PhysicsTest\core\programs\SkyBox.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="PhysicsTest\core\programs\Diffuse_Color_pp.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="PhysicsTest\core\programs\Diffuse_Color_vp.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="PhysicsTest\assets\textures\floor.bmp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{9C233CC8-D897-407B-9290-E20C1BA33EC6}</ProjectGuid>
@@ -55,7 +75,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>C:\Users\Mifoz\Documents\Visual Studio 2013\Projects\EFE-Engine\EFE Engine\include;C:\Users\Mifoz\Documents\efe-engine dependencies\include;$(IncludePath)</IncludePath>
+    <IncludePath>.\$(ProjectName);C:\Users\Mifoz\Documents\Visual Studio 2013\Projects\EFE-Engine\EFE Engine\include;C:\Users\Mifoz\Documents\efe-engine dependencies\include;$(IncludePath)</IncludePath>
     <LibraryPath>C:\Users\Mifoz\Documents\efe-engine dependencies\lib\win32;C:\Users\Mifoz\Documents\Visual Studio 2013\Projects\EFE-Engine\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
